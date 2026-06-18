@@ -1,4 +1,4 @@
-PACKAGES := tmux vim
+PACKAGES := tmux vim claude
 
 .PHONY: sync install
 
