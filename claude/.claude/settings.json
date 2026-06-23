@@ -1,0 +1,18 @@
+{
+  "effortLevel": "high",
+  "theme": "dark",
+  "permissions": {
+    "allow": [
+      "Bash(tmux list-sessions*)",
+      "Bash(tmux list-windows*)",
+      "Bash(tmux list-panes*)",
+      "Bash(tmux capture-pane*)",
+      "Bash(tmux has-session*)",
+      "Bash(tmux new-session*)",
+      "Bash(tmux new-window*)",
+      "Bash(tmux display-message*)",
+      "Bash(tmux select-window*)",
+      "Bash(tmux select-pane*)"
+    ]
+  }
+}
