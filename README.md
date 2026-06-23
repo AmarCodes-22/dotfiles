@@ -8,7 +8,7 @@ Personal config files managed with [GNU Stow](https://www.gnu.org/software/stow/
 |---------|-------|
 | `tmux`  | `~/.tmux.conf` |
 | `vim`   | `~/.vimrc` |
-| `claude` | `~/.claude/commands/` |
+| `claude` | `~/.claude/commands/`, `~/.claude/settings.json` |
 
 ## Usage
 
@@ -17,6 +17,13 @@ Personal config files managed with [GNU Stow](https://www.gnu.org/software/stow/
 make install
 ```
 Installs stow if missing, then symlinks all packages to `$HOME`.
+
+> **Note (claude package):** stow can't manage `~/.claude` directly since it contains Claude's runtime data. After `make install`, manually symlink the claude configs:
+> ```bash
+> mkdir -p ~/.claude
+> ln -sf $(PWD)/claude/.claude/commands ~/.claude/commands
+> ln -sf $(PWD)/claude/.claude/settings.json ~/.claude/settings.json
+> ```
 
 **Sync changes to GitHub:**
 ```
