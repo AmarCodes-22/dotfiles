@@ -12,7 +12,7 @@ install:
 		if [ "$$(uname)" = "Darwin" ]; then brew install stow; \
 		else sudo apt-get install -y stow; fi; \
 	}
-	stow --target=$(HOME) $(PACKAGES)
+	stow --adopt --target=$(HOME) $(PACKAGES)
 	# TODO: stow can't handle claude individually since ~/.claude has runtime data.
 	# Manually symlink after install:
 	#   mkdir -p ~/.claude
